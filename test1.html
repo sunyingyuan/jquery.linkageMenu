@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Select</title>
+    <script src="jquery-1.11.0.js"></script>
+    <script src="test.js"></script>
+    <script>
+$(function(){
+    $.linkageMenu({
+        'selectOneId': 'selectOne',
+        'selectTwoId': 'selectTwo',
+        'selectThreeId': 'selectThree',
+        'selectOneVal': '{"key1":"value1", "key2":"value2"}',
+        //'selectTwoVal': '{"abc":"abc", "abca":"abca"}',
+        'selectThreeVal': '{"abc":"abc", "abca":"abca"}',
+        'getSelectTwoValUrl': 'http://localhost:8080/getSelect2Val/listAll'
+    });
+});
+</script>
+</head>
+<body>
+	<div>
+        <select id="selectOne">
+        	<option>一级菜单</option>
+        </select>
+        <select id="selectTwo">
+        	<option>请选择一级菜单</option>
+        </select>
+        <select id="selectThree">
+        	<option>请选择二级菜单</option>
+        </select>
+    </div>
+</body>
+</html>
